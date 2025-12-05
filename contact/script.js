@@ -21,6 +21,7 @@ function letterFilename(letter) {
     if (letter === '💣') return null;
     if (letter === '@') return 'arobase';
     if (letter === '-') return 'tiret';
+    if (letter === '_') return 'underscore';
     if (letter === '.') return 'point';
     return letter.toLowerCase();
 }
