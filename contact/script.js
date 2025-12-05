@@ -18,7 +18,7 @@ const SOUNDS = {
 };
 
 function letterFilename(letter) {
-    if (letter === '💣') return null;
+    if (letter === '💣') return 'explosion';
     if (letter === '@') return 'arobase';
     if (letter === '-') return 'tiret';
     if (letter === '_') return 'underscore';
@@ -38,7 +38,9 @@ const state = {
     pointerId: null,
     origin: { x: 0, y: 0 },
     current: { x: 0, y: 0, angle: 0 },
-    letterIndex: 0
+    letterIndex: 0,
+    timerStartTime: null,
+    timerInterval: null
 };
 
 /**
@@ -47,6 +49,7 @@ const state = {
 document.addEventListener('DOMContentLoaded', () => {
     initLetterMenu();
     initSlingshot();
+    initTimer();
     
     // Lancer le mélange automatique
     setInterval(swapFields, CONFIG.SWAP_INTERVAL);
@@ -144,18 +147,38 @@ document.addEventListener('DOMContentLoaded', () => {
  * Affiche l'overlay de succès (Style géré dans CSS)
  */
 function envoyer() {
+    stopTimer();
+    
+    // Récupérer le temps écoulé en secondes
+    const elapsed = Math.floor((Date.now() - state.timerStartTime) / 1000);
+    
     const overlay = document.createElement('div');
     overlay.id = 'confirmation-overlay';
     
     overlay.innerHTML = `
         <div class="overlay-box">
             <div class="overlay-check">✓</div>
-            <p class="overlay-text">Votre message a bien été envoyé!</p>
+            <p class="overlay-text">Votre message a bien été envoyé!<br><span class="overlay-time">Vous avez passé ${elapsed} secondes sur cette page, un champ de texte bien fait c'est mieux non ?</span></p>
             <button class="overlay-btn" onclick="fermerTout()">Fermer</button>
         </div>
     `;
     
     document.body.appendChild(overlay);
+}
+
+/**
+ * Gère le timer (démarre et arrête le chronomètre)
+ */
+function initTimer() {
+    state.timerStartTime = Date.now();
+    state.timerInterval = setInterval(() => {}, 100); // Tourne en fond
+}
+
+function stopTimer() {
+    if (state.timerInterval) {
+        clearInterval(state.timerInterval);
+        state.timerInterval = null;
+    }
 }
 
 /**

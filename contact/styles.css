@@ -340,6 +340,14 @@ button:hover {
     margin: 20px 0;
 }
 
+.overlay-time {
+    display: block;
+    font-size: 24px;
+    color: var(--c-secondary);
+    font-family: 'Courier New', monospace;
+    margin-top: 10px;
+}
+
 .overlay-btn {
     margin-top: 30px;
     padding: 15px 30px;
