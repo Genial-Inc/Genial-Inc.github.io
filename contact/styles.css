@@ -1,0 +1,365 @@
+/* =========================================
+   1. VARIABLES & CONFIGURATION
+   ========================================= */
+:root {
+    /* Palette "Brutalist" / Retro */
+    --c-bg-page: #f4f4f4;
+    --c-bg-container: #c0c0c0;
+    --c-bg-input: #ffff00;
+    --c-bg-input-group: #c8c8c8;
+    
+    --c-primary: #ff0000;    /* Rouge bordures/textes */
+    --c-secondary: #0000ff;  /* Bleu textes */
+    --c-accent: #ff00ff;     /* Magenta bordures */
+    --c-highlight: #ffff00;  /* Jaune fond/texte */
+    --c-cyan: #00ffff;
+    
+    --font-main: "Comic Sans MS", "Arial", cursive;
+    
+    --shadow-hard: 5px 5px 0px #000000;
+    --border-ridge: 5px ridge #808080;
+}
+
+/* =========================================
+   2. BASE & TYPOGRAPHIE
+   ========================================= */
+body {
+    font-family: var(--font-main);
+    background-color: var(--c-bg-page);
+    /* Motif SVG en arrière-plan */
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="50" height="50" fill="%23ff00ff"/><rect x="50" y="50" width="50" height="50" fill="%23ff00ff"/><rect x="50" width="50" height="50" fill="%2300ffff"/><rect y="50" width="50" height="50" fill="%2300ffff"/></svg>');
+    border: 10px double var(--c-primary);
+    
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    margin: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 0 auto 20px;
+    text-align: center;
+    font-size: 48px;
+    color: var(--c-primary);
+    text-shadow: 3px 3px var(--c-highlight), 6px 6px #00ff00;
+    animation: wobble 2s infinite;
+}
+
+/* =========================================
+   3. LAYOUT (Mise en page)
+   ========================================= */
+.layout-wrapper {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px; /* Limite la largeur sur grands écrans */
+}
+
+/* Conteneur du formulaire et du jeu */
+.container {
+    background: var(--c-bg-container);
+    width: 360px;
+    padding: 6px 15px;
+    border: var(--border-ridge);
+    flex-shrink: 0;
+}
+
+/* Panneau d'instructions (sur le côté) */
+.instructions-panel {
+    background: var(--c-bg-container);
+    width: 280px;
+    padding: 20px;
+    border: var(--border-ridge);
+    border-radius: 4px;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+}
+
+/* Styles internes des instructions */
+.instructions-panel h2 {
+    margin: 0 0 15px 0;
+    text-align: center;
+    font-size: 24px;
+    color: var(--c-primary);
+    text-shadow: 2px 2px var(--c-highlight);
+}
+
+.instructions-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--c-secondary);
+}
+
+.instructions-panel li {
+    margin-bottom: 10px;
+    padding: 8px;
+    background: var(--c-highlight);
+    border: 2px solid var(--c-primary);
+    border-radius: 3px;
+    box-shadow: 2px 2px 0px var(--c-accent);
+}
+
+/* =========================================
+   4. FORMULAIRE
+   ========================================= */
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px;
+    background: var(--c-bg-input-group);
+    
+    border: 5px groove var(--c-accent);
+    box-shadow: 10px 10px 0px var(--c-primary);
+    
+    font-size: 18px;
+    color: var(--c-secondary);
+    
+    /* Propriétés pour l'animation de mélange */
+    position: relative;
+    z-index: 1;
+    will-change: transform;
+    transition: transform 450ms cubic-bezier(.2,.8,.2,1), opacity 300ms ease;
+}
+
+/* État actif pendant le mélange automatique */
+.input-group.moving {
+    z-index: 100;
+    border-radius: 4px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--c-bg-input);
+}
+
+textarea {
+    height: 75px;
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    
+    font-size: 24px;
+    font-family: var(--font-main);
+    font-weight: bold;
+    
+    background: linear-gradient(180deg, #ff0000 0%, #cc0000 100%);
+    color: var(--c-highlight);
+    border: 5px outset #ff6666;
+    
+    cursor: pointer;
+    text-shadow: 2px 2px #000000;
+    box-shadow: var(--shadow-hard);
+    animation: pulse 1.5s infinite;
+}
+
+button:hover {
+    background: linear-gradient(180deg, #28a745 0%, #218838 100%);
+    border-color: #4cd16e;
+}
+
+/* =========================================
+   5. JEU & LANCE-PIERRE
+   ========================================= */
+
+/* Zone du lance-pierre */
+#thingy-wrapper {
+    text-align: center;
+    position: relative; /* Pour positionner les éléments internes */
+}
+
+#thingy {
+    width: 40%;
+    margin-top: -85px;
+    pointer-events: none; /* Laisse passer les clics au travers */
+}
+
+/* La clé (projectile) */
+#key {
+    display: block;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 20px auto 0 auto;
+    
+    position: relative;
+    z-index: 200;
+    
+    cursor: grab;
+    touch-action: none;
+    will-change: transform;
+    transition: transform 350ms cubic-bezier(.2,.8,.2,1);
+}
+
+#key.dragging {
+    cursor: grabbing;
+    transition: none;
+}
+
+#key img {
+    display: block;
+    height: 60px;
+    pointer-events: none; /* L'image ne bloque pas le drag */
+}
+
+/* Lettre sur la clé */
+#key-letter {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -55%);
+    
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1;
+    color: #111;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.6);
+    
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Menu de sélection des lettres */
+.letter-menu {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-top: 15px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.letter-nav-btn {
+    background: var(--c-accent);
+    color: var(--c-highlight);
+    border: 3px solid var(--c-secondary);
+    box-shadow: 3px 3px 0px var(--c-secondary);
+    
+    font-size: 14px;
+    font-weight: bold;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: all 0.1s cubic-bezier(.2,.8,.2,1);
+}
+
+.letter-nav-btn:hover {
+    background: var(--c-cyan);
+    box-shadow: 0 0 6px var(--c-secondary), 3px 3px 0px var(--c-accent);
+    transform: scale(1.1) rotate(4deg);
+}
+
+.letter-nav-btn.clicked {
+    animation: arrow-click 200ms ease-in-out;
+}
+
+#letter-prev{
+    position: relative;
+}
+
+/* =========================================
+   6. ANIMATIONS
+   ========================================= */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+@keyframes wobble {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-2deg); }
+    75% { transform: rotate(2deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes arrow-click {
+    0% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.08) rotate(-3deg); }
+    100% { transform: scale(1) rotate(0deg); }
+}
+
+/* =========================================
+   8. OVERLAY CONFIRMATION (Ajouté du JS)
+   ========================================= */
+#confirmation-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background-color: var(--c-bg-page);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="50" height="50" fill="%23ff00ff"/><rect x="50" y="50" width="50" height="50" fill="%23ff00ff"/><rect x="50" width="50" height="50" fill="%2300ffff"/><rect y="50" width="50" height="50" fill="%2300ffff"/></svg>');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.overlay-box {
+    background: #c0c0c0;
+    padding: 40px;
+    border: var(--border-ridge);
+    width: 400px;
+    text-align: center;
+    box-shadow: 15px 15px 0px #000000;
+}
+
+.overlay-check {
+    font-size: 80px;
+    margin: 20px 0;
+    animation: bounce 1s ease-in-out infinite;
+}
+
+.overlay-text {
+    font-size: 32px;
+    color: var(--c-primary);
+    font-weight: bold;
+    text-shadow: 3px 3px var(--c-highlight), 6px 6px #00ff00;
+    font-family: var(--font-main);
+    margin: 20px 0;
+}
+
+.overlay-btn {
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-family: var(--font-main);
+    font-weight: bold;
+    background: linear-gradient(180deg, #ff0000 0%, #cc0000 100%);
+    color: var(--c-highlight);
+    border: 5px outset #ff6666;
+    cursor: pointer;
+    text-shadow: 2px 2px #000000;
+    box-shadow: 5px 5px 0px #000000;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}

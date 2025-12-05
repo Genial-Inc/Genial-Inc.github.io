@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nous Contacter - Inversion</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        #fields-container {
+            position: relative;
+        }
+        #key-img {
+            height: 10%; /* Ajuste selon ton design CSS */
+            width: auto;
+        }
+        #thingy {
+            width: 40%;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="layout-wrapper">
+        
+        <section class="container">
+            <h1>Nous Contacter</h1>
+            
+            <form id="contactForm">
+                <div id="fields-container">
+                    
+                    <div class="input-group" id="group-name">
+                        <label for="name">Prénom :</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="input-group" id="group-email">
+                        <label for="email">Courriel :</label>
+                        <input type="email" id="email" name="email" required readonly>
+                    </div>
+
+                    <div class="input-group" id="group-phone">
+                        <label for="phone">Téléphone :</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="input-group" id="group-message">
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+
+                </div>
+
+                <button type="button" onclick="envoyer()">Envoyer</button>
+            </form>
+           
+            <div id="thingy-wrapper">
+                <div id="key" class="key-wrap" aria-hidden="false">
+                    <img id="key-img" src="/contact/resources/key.png" alt="Clé du clavier">
+                    <span id="key-letter" aria-hidden="true"></span>
+                </div>
+                <img src="/contact/resources/thingy.png" id="thingy" alt="Lance-pierre">
+            </div>
+
+            <div id="letter-menu" class="letter-menu">
+                <button id="letter-prev" class="letter-nav-btn" aria-label="Lettre précédente">◀</button>
+            </div>
+        </section>
+
+        <aside class="instructions-panel">
+            <h2>Instructions</h2>
+            <ul>
+                <li><strong>Tirez :</strong> Maintenez le clic gauche et relâchez pour tirer la lettre dans le champ 'Courriel'. Les autres champs se remplissent normalement.</li>
+                <li><strong>Durée :</strong> La touche reste immobile 1 seconde après le tir.</li>
+                <li><strong>Sélectionnez :</strong> Choisissez la lettre via la roulette. Utilisez la bombe en cas d'erreur !</li>
+                <li><strong>Son :</strong> Activez le son pour une meilleure expérience. Attention à ne pas trop élever le volume.</li>
+                <li><strong>Envoyez :</strong> Remplissez tout le formulaire avant de cliquer sur 'Envoyer'.</li>
+            </ul>
+        </aside>
+
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        function fermerTout() {
+            window.close();
+        }
+    </script>
+</body>
+</html>
