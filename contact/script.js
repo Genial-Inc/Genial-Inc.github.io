@@ -380,6 +380,8 @@ function verifierImpact(x, y) {
         if (letter === '💣') {
             const removeCount = Math.floor(Math.random() * 5 + 1);
             emailInput.value = emailInput.value.slice(0, Math.max(0, emailInput.value.length - removeCount));
+            // Afficher le GIF d'explosion au point d'impact
+            try { showExplosionAt(x, y); } catch (err) { console.warn('Explosion display failed', err); }
         } else {
             emailInput.value += letter;
         }
@@ -450,4 +452,27 @@ function updateLetterDisplay() {
             letterSpan.style.fontSize = '20px';
         }
     }
+}
+
+/**
+ * Affiche un GIF d'explosion à la position absolue (coordonnées fenêtre)
+ * Le GIF est supprimé automatiquement après un délai.
+ */
+function showExplosionAt(absX, absY) {
+    const img = document.createElement('img');
+    img.className = 'explosion-gif';
+    img.src = '/contact/resources/explosion.gif';
+    img.alt = 'explosion';
+
+    // Position fixed en utilisant les coordonnées absolues fournies
+    img.style.left = `${absX}px`;
+    img.style.top = `${absY}px`;
+
+    document.body.appendChild(img);
+
+    // Retirer après animation/durée (1.2s)
+    setTimeout(() => {
+        img.classList.add('explosion-fade');
+        setTimeout(() => { if (img && img.parentNode) img.parentNode.removeChild(img); }, 350);
+    }, 1200);
 }

@@ -371,3 +371,25 @@ button:hover {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-20px); }
 }
+
+/* Explosion GIF */
+.explosion-gif {
+    position: fixed;
+    width: 140px;
+    height: auto;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 2000;
+    transition: opacity 300ms ease;
+    will-change: transform, opacity;
+    animation: explodeScale 300ms ease-out;
+}
+
+.explosion-gif.explosion-fade {
+    opacity: 0;
+}
+
+@keyframes explodeScale {
+    from { transform: translate(-50%, -50%) scale(0.6); opacity: 0; }
+    to { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
