@@ -49,6 +49,90 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Lancer le mélange automatique
     setInterval(swapFields, CONFIG.SWAP_INTERVAL);
+
+    // Draw two straight lines from the top corners of the thingy to the bottom-center of the key.
+    // We use an SVG overlay so lines can be updated while the key moves (via transforms).
+    (function setupConnectionLines() {
+        const NS = 'http://www.w3.org/2000/svg';
+        const svg = document.createElementNS(NS, 'svg');
+        svg.setAttribute('id', 'connect-lines');
+        svg.setAttribute('aria-hidden', 'true');
+        svg.style.position = 'fixed';
+        svg.style.left = '0';
+        svg.style.top = '0';
+        svg.style.width = '100%';
+        svg.style.height = '100%';
+        svg.style.pointerEvents = 'none';
+        svg.style.zIndex = '150';
+
+        const lineLeft = document.createElementNS(NS, 'line');
+        lineLeft.setAttribute('id', 'line-left');
+        lineLeft.setAttribute('stroke', '#000000');
+        lineLeft.setAttribute('stroke-width', '3');
+        lineLeft.setAttribute('stroke-linecap', 'round');
+
+        const lineRight = document.createElementNS(NS, 'line');
+        lineRight.setAttribute('id', 'line-right');
+        lineRight.setAttribute('stroke', '#000000');
+        lineRight.setAttribute('stroke-width', '3');
+        lineRight.setAttribute('stroke-linecap', 'round');
+
+        svg.appendChild(lineLeft);
+        svg.appendChild(lineRight);
+        document.body.appendChild(svg);
+
+        function updateLines(){
+            const thingy = document.getElementById('thingy');
+            const keyEl = document.getElementById('key');
+            if (!thingy || !keyEl) return;
+            const t = thingy.getBoundingClientRect();
+            const k = keyEl.getBoundingClientRect();
+
+            const factor = 0.22;
+            const tlx = t.left + t.width*factor;
+            const tly = t.top + t.height*factor;
+            const trx = t.right - t.width*factor;
+            const tryTop = t.top + t.height*factor;
+
+            // Si la touche n'a pas dépassé
+            if (k.y+k.height > tly) {
+                const kcx = k.left + k.width / 2;
+                const kby = k.top + k.height / 2;
+
+                lineLeft.setAttribute('x1', tlx);
+                lineLeft.setAttribute('y1', tly);
+                lineLeft.setAttribute('x2', kcx);
+                lineLeft.setAttribute('y2', kby);
+
+                lineRight.setAttribute('x1', trx);
+                lineRight.setAttribute('y1', tryTop);
+                lineRight.setAttribute('x2', kcx);
+                lineRight.setAttribute('y2', kby);
+            } else {
+                lineLeft.setAttribute('x1', tlx);
+                lineLeft.setAttribute('y1', tly);
+                lineLeft.setAttribute('x2', trx);
+                lineLeft.setAttribute('y2', tryTop);
+                
+                lineRight.setAttribute('x1', trx);
+                lineRight.setAttribute('y1', tryTop);
+                lineRight.setAttribute('x2', tlx);
+                lineRight.setAttribute('y2', tly);
+            }
+        }
+
+        // update continuously for smooth visuals while dragging/animating
+        let raf = null;
+        function loop(){
+            updateLines();
+            raf = requestAnimationFrame(loop);
+        }
+        loop();
+
+        // keep responsive on resize/scroll
+        window.addEventListener('resize', updateLines);
+        window.addEventListener('scroll', updateLines, { passive: true });
+    })();
 });
 
 /* -------------------------------------------------------------------------- */
