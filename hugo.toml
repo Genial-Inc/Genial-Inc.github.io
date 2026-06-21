@@ -1,0 +1,37 @@
+# baseURL = "https://genial.inc/"
+locale = "fr-FR"
+title = "Genial Inc." #[cite: 1]
+theme = "genial-theme"
+
+# Disable default taxonomies if you only need a single-page landing site
+# disableKinds = ["taxonomy", "term"]
+
+[params]
+  description = "Collectif d'étudiants passionnés par les mathématiques et l'informatique." #[cite: 1]
+  author = "Genial Inc." #[cite: 1]
+
+# [markup]
+#   # Ensure clean HTML output without injecting unwanted wrapper tags
+#   [markup.goldmark.renderer]
+#     unsafe = true
+
+# Optional: Define your main menu if you decide to make the hardcoded header dynamic later
+[[menu.main]]
+  name = "HOME" #[cite: 1]
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "Projets" #[cite: 1]
+  url = "#projects"
+  weight = 2
+
+[[menu.main]]
+  name = "La team" #[cite: 1]
+  url = "#team"
+  weight = 3
+
+[[menu.main]]
+  name = "Contact" #[cite: 1]
+  url = "#contact"
+  weight = 4

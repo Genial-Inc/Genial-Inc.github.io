@@ -1,0 +1,90 @@
+{{ define "main" }}
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>Titre du projet</h1> <!--[cite: 1] -->
+        <p class="bla">Bla<br>bla</p> <!--[cite: 1] -->
+        <p class="desc">Une petite description du projet.</p> <!--[cite: 1] -->
+        <a href="#" class="btn">Télécharger</a> <!--[cite: 1] -->
+    </div>
+    <div class="hero-visual">
+        <div class="game-screen">
+            <span>👾 Genial Bubble v1.0</span> <!--[cite: 1] -->
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+    <div class="about-top">
+        <h2>Qu'est-ce que Genial Inc. ?</h2> <!--[cite: 1] -->
+        <a href="#" class="btn btn-outline">En savoir plus</a> <!--[cite: 1] -->
+    </div>
+    <p class="about-p">
+        Nous sommes un petit groupe d'étudiants passionnés par les mathématiques<br>
+        et l'informatique, actifs dans de nombreux projets et événements ! <!--[cite: 1] -->
+    </p>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+    <h2>La team géniale</h2> <!--[cite: 1] -->
+    <div class="team-layout">
+        <div class="members">
+            <div class="member-card">
+                <div class="circle"></div>
+                <h3>Julien Chatelet</h3> <!--[cite: 1] -->
+                <p>Petite description personnelle</p> <!--[cite: 1] -->
+            </div>
+            <div class="member-card">
+                <div class="circle"></div>
+                <h3>Unai Hernandez Minaherry</h3> <!--[cite: 1] -->
+                <p>Petite description personnelle</p> <!--[cite: 1] -->
+            </div>
+            <div class="member-card">
+                <div class="circle"></div>
+                <h3>Jacques Marion</h3> <!--[cite: 1] -->
+                <p>Petite description personnelle</p> <!--[cite: 1] -->
+            </div>
+        </div>
+
+        <div class="poll-box">
+            <h4>Qui est le plus beau ?</h4> <!--[cite: 1] -->
+            <form>
+                <label><input type="radio" name="beau"> Julien</label> <!--[cite: 1] -->
+                <label><input type="radio" name="beau"> Unai</label> <!--[cite: 1] -->
+                <label><input type="radio" name="beau"> Jacques</label> <!--[cite: 1] -->
+                <button type="button" class="btn btn-small" onclick="alert('C\'est les 3 !')">Voter</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2>Projets passés et futurs</h2> <!--[cite: 1] -->
+    <div class="carousel">
+        <button class="arrow">◀</button>
+
+        <!-- START OF THE HUGO DYNAMIC LOOP -->
+        {{ range where .Site.RegularPages "Section" "projects" }}
+        <div class="project-box">
+            <div class="p-info">
+                <h3>{{ .Title }}</h3>
+                <p>{{ .Description }}</p>
+                <a href="{{ .RelPermalink }}" class="btn btn-small">Voir le projet</a>
+            </div>
+            <img src="{{ absURL .Params.Image }}" class="p-img">
+        </div>
+        {{ end }}
+        <!-- END OF LOOP -->
+
+        <button class="arrow">▶</button>
+    </div>
+</section>
+
+<!-- CTA -->
+<section id="contact" class="cta">
+    <a href="mailto:contact@genial.inc" class="btn btn-huge">Contact Us</a> <!--[cite: 1] -->
+</section>
+{{ end }}

@@ -1,0 +1,16 @@
+{{ define "main" }}
+<article class="project-presentation">
+    <header class="single-header">
+        <h1>{{ .Title }}</h1>
+        <p class="meta">Publié le {{ .Date.Format "02/01/2006" }}</p>
+    </header>
+
+    <div class="single-content">
+        {{ .Content }}
+    </div>
+
+    <div class="back-link">
+        <a href="/#projects" class="btn btn-outline">← Retour aux projets</a>
+    </div>
+</article>
+{{ end }}
