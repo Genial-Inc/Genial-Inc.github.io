@@ -15,9 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
         currentIndex = index;
     }
 
-    // Initialize by showing the first slide
-    showSlide(0);
-
     if (prevBtn) {
         prevBtn.addEventListener('click', () => {
             let index = currentIndex - 1;
