@@ -8,6 +8,7 @@ html {
   --bg-project-card: #e3d7c2;
   --color-green: #5b8c46;
   --color-text: #2b2b2b;
+  --color-text-light: #555;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -35,10 +36,16 @@ nav a.active, nav a:hover { background-color: var(--color-green); color: white; 
 .btn-huge { padding: 1.4rem 5rem; font-size: 1.6rem; border-radius: 40px; }
 
 /* CONTAINERS */
-main { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+main { max-width: 1200px; margin: 0 auto; padding: 2rem; } */
 section { margin-bottom: 6rem; }
 h1, h2, h3 { color: var(--color-text); margin-bottom: 1rem; }
 h2 { font-size: 2.2rem; }
+
+/* LISTS */
+ul {
+  list-style-type: circle;
+  list-style-position: inside;
+}
 
 /* HERO */
 .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; min-height: 45vh; }
@@ -75,6 +82,20 @@ footer { background-color: var(--color-green); padding: 4rem 2rem; color: white;
 .col h4 { margin-bottom: 1.2rem; font-size: 1.1rem; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 0.5rem; }
 .col a { display: block; color: white; text-decoration: none; margin-bottom: 0.6rem; font-size: 0.9rem; opacity: 0.9; }
 .col a:hover { text-decoration: underline; opacity: 1; }
+
+/* PROJECT PAGE */
+.project-presentation {
+  width: 80%;
+  margin: auto;
+}
+.single-header { margin-bottom: 2rem; }
+.single-header h1 { margin-bottom: 0; }
+.single-header .date { color: var(--color-text-light) }
+.single-content h1, h2, h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.back-link { margin-top: 2rem; text-align: right; }
 
 @media(max-width: 850px) {
   .hero, .team-layout, .project-box, .footer-cols { grid-template-columns: 1fr; }

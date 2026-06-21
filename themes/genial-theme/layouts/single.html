@@ -1,9 +1,9 @@
 {{ define "main" }}
 <article class="project-presentation">
-    <header class="single-header">
+    <div class="single-header">
         <h1>{{ .Title }}</h1>
         <p class="meta">Publié le {{ .Date.Format "02/01/2006" }}</p>
-    </header>
+    </div>
 
     <div class="single-content">
         {{ .Content }}
