@@ -24,6 +24,7 @@ theme = "genial-theme"
     name = "Unai Hernandez Minaberry"
     shortName = "Unai"
     description = "Hola"
+    # image = "/images/unai.png"
 
     [[params.team.members]]
     name = "Julien Chatelet"

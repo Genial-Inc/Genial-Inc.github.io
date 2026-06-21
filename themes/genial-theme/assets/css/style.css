@@ -47,6 +47,14 @@ ul {
   list-style-position: inside;
 }
 
+/* IMAGES */
+img { 
+  /* center the alt text */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 /* HERO */
 .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; min-height: 45vh; }
 .hero h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 0.5rem; }

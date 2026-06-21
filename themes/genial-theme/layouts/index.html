@@ -39,7 +39,9 @@
         <div class="members">
             {{ range .members }}
             <div class="member-card">
-                <div class="circle"></div>
+                <div class="circle" style="overflow: hidden">
+                    <img src="{{ .image }}" alt="{{ .name }}" style="height: 100%">
+                </div>
                 <h3>{{ .name }}</h3>
                 <p>{{ .description }}</p>
             </div>
