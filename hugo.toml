@@ -1,14 +1,14 @@
 # baseURL = "https://genial.inc/"
 locale = "fr-FR"
-title = "Genial Inc." #[cite: 1]
+title = "Genial Inc."
 theme = "genial-theme"
 
 # Disable default taxonomies if you only need a single-page landing site
 # disableKinds = ["taxonomy", "term"]
 
 [params]
-  description = "Collectif d'étudiants passionnés par les mathématiques et l'informatique." #[cite: 1]
-  author = "Genial Inc." #[cite: 1]
+  description = "Collectif d'étudiants passionnés par les mathématiques et l'informatique."
+  author = "Genial Inc."
 
   [params.about]
     title = "Qu'est-ce que Génial Inc. ?"
@@ -37,21 +37,21 @@ theme = "genial-theme"
 
 # Optional: Define your main menu if you decide to make the hardcoded header dynamic later
 [[menu.main]]
-  name = "HOME" #[cite: 1]
+  name = "HOME"
   url = "/"
   weight = 1
 
 [[menu.main]]
-  name = "Projets" #[cite: 1]
+  name = "Projets"
   url = "#projects"
   weight = 2
 
 [[menu.main]]
-  name = "La team" #[cite: 1]
+  name = "La team"
   url = "#team"
   weight = 3
 
 [[menu.main]]
-  name = "Contact" #[cite: 1]
+  name = "Contact"
   url = "#contact"
   weight = 4
