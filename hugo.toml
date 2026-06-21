@@ -10,15 +10,25 @@ theme = "genial-theme"
   description = "Collectif d'étudiants passionnés par les mathématiques et l'informatique." #[cite: 1]
   author = "Genial Inc." #[cite: 1]
 
-  [[params.members]]
-  name = "Unai Hernandez Minaberry"
-  shortName = "Unai"
-  description = "Hola"
+  [params.about]
+    title = "Qu'est-ce que Génial Inc. ?"
+    description = """
+    Nous sommes un petit groupe d'étudiants passionnés par les mathématiques.
+    et l'informatique, actifs dans de nombreux projets et événements !
+    """
 
-  [[params.members]]
-  name = "Julien Chatelet"
-  shortName = "Julien"
-  description = "Bla bla bla"
+  [params.team]
+    title = "La team géniale"
+
+    [[params.team.members]]
+    name = "Unai Hernandez Minaberry"
+    shortName = "Unai"
+    description = "Hola"
+
+    [[params.team.members]]
+    name = "Julien Chatelet"
+    shortName = "Julien"
+    description = "Bla bla bla"
 
 # [markup]
 #   # Ensure clean HTML output without injecting unwanted wrapper tags
