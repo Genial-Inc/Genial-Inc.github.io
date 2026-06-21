@@ -43,9 +43,9 @@
         <div class="poll-box">
             <h4>Qui est le plus beau ?</h4> <!--[cite: 1] -->
             <form>
-                <label><input type="radio" name="beau"> Julien</label> <!--[cite: 1] -->
-                <label><input type="radio" name="beau"> Unai</label> <!--[cite: 1] -->
-                <label><input type="radio" name="beau"> Jacques</label> <!--[cite: 1] -->
+                {{ range .Site.Params.members }}
+                <label><input type="radio" name="beau"> {{ .shortName }}</label> <!--[cite: 1] -->
+                {{ end }}
                 <button type="button" class="btn btn-small" onclick="alert('C\'est les 3 !')">Voter</button>
             </form>
         </div>

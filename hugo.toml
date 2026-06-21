@@ -12,10 +12,12 @@ theme = "genial-theme"
 
   [[params.members]]
   name = "Unai Hernandez Minaberry"
+  shortName = "Unai"
   description = "Hola"
 
   [[params.members]]
   name = "Julien Chatelet"
+  shortName = "Julien"
   description = "Bla bla bla"
 
 # [markup]
