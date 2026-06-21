@@ -10,6 +10,14 @@ theme = "genial-theme"
   description = "Collectif d'étudiants passionnés par les mathématiques et l'informatique." #[cite: 1]
   author = "Genial Inc." #[cite: 1]
 
+  [[params.members]]
+  name = "Unai Hernandez Minaberry"
+  description = "Hola"
+
+  [[params.members]]
+  name = "Julien Chatelet"
+  description = "Bla bla bla"
+
 # [markup]
 #   # Ensure clean HTML output without injecting unwanted wrapper tags
 #   [markup.goldmark.renderer]

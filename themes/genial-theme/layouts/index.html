@@ -31,21 +31,13 @@
     <h2>La team géniale</h2> <!--[cite: 1] -->
     <div class="team-layout">
         <div class="members">
+            {{ range .Site.Params.members }}
             <div class="member-card">
                 <div class="circle"></div>
-                <h3>Julien Chatelet</h3> <!--[cite: 1] -->
-                <p>Petite description personnelle</p> <!--[cite: 1] -->
+                <h3>{{ .name }}</h3> <!--[cite: 1] -->
+                <p>{{ .description }}</p> <!--[cite: 1] -->
             </div>
-            <div class="member-card">
-                <div class="circle"></div>
-                <h3>Unai Hernandez Minaherry</h3> <!--[cite: 1] -->
-                <p>Petite description personnelle</p> <!--[cite: 1] -->
-            </div>
-            <div class="member-card">
-                <div class="circle"></div>
-                <h3>Jacques Marion</h3> <!--[cite: 1] -->
-                <p>Petite description personnelle</p> <!--[cite: 1] -->
-            </div>
+            {{ end }}
         </div>
 
         <div class="poll-box">
