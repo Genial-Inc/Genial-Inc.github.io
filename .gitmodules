@@ -1,0 +1,3 @@
+[submodule "themes/genial-theme"]
+	path = themes/genial-theme
+	url = git@github.com:Genial-Inc/genial-theme.git
