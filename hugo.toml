@@ -10,6 +10,13 @@ theme = "genial-theme"
   description = "Collectif d'étudiants passionnés par les mathématiques et l'informatique."
   author = "Genial Inc."
 
+  [params.hero]
+  title = "Genial Bubble"
+  description = "Jeu de platformes Global Game Jam 2025"
+  image = "/projects/images/genial-bubble.png"
+  button.text = "Jouer"
+  button.url = "/play/genial-bubble"
+
   [params.about]
     title = "Qu'est-ce que Génial Inc. ?"
     description = """

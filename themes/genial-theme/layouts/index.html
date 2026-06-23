@@ -1,19 +1,31 @@
 {{ define "main" }}
 
 <!-- HERO -->
+{{ if isset .Site.Params "hero" }}
+{{ with .Site.Params.hero }}
 <section class="hero">
     <div class="hero-text">
-        <h1>Titre du projet</h1>
-        <p class="bla">Bla<br>bla</p>
-        <p class="desc">Une petite description du projet.</p>
-        <a href="#" class="btn">Télécharger</a>
+        {{ if isset . "title" }}
+        <h1>{{ .title }}</h1>
+        {{ end }}
+
+        {{ if isset . "description" }}
+        <p class="desc">{{ .description }}</p>
+        {{ end }}
+
+        {{ if isset . "button" }}
+        <a href="{{ .button.url }}" class="btn">{{ .button.text }}</a>
+        {{ end }}
     </div>
+
+    {{ if isset . "image" }}
     <div class="hero-visual">
-        <div class="game-screen">
-            <span>👾 Genial Bubble v1.0</span>
-        </div>
+        <img src="{{ .image }}" class="game-screen">
     </div>
+    {{ end }}
 </section>
+{{ end }}
+{{ end }}
 
 <!-- ABOUT -->
 {{ if isset .Site.Params "about" }}
