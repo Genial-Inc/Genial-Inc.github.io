@@ -178,17 +178,9 @@ img {
 }
 
 .game-screen {
-  background: #4a3525;
   height: 260px;
   border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border: 4px solid #222;
-  color: #f4a261;
-  font-family: monospace;
-  font-size: 1.2rem;
-  margin: auto;
 }
 
 /* ABOUT */
@@ -397,13 +389,19 @@ h3 {
     padding: 1.5rem;
   }
 
+  .hero-text {
+    margin: auto;
+  }
+
   /* Responsive Headings & Elements */
   .hero h1 {
     font-size: 2.2rem;
   }
 
-  .hero .bla {
-    font-size: 1.1rem;
+  .game-screen {
+    height: auto;
+    width: min(100%, 500px);
+    margin: auto;
   }
 
   .project-presentation {
