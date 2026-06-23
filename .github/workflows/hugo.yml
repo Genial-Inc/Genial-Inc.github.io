@@ -55,6 +55,7 @@ jobs:
             https://github.com/Genial-Inc/Genial-Bubble/releases/download/0.1/web-build.zip
           unzip ${{ runner.temp }}/web-build.zip -d ${{ runner.temp }}/web-build-extract
           mv ${{ runner.temp }}/web-build-extract/web-build/* ./static/play/genial-bubble/
+      - name: Build with Hugo
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
