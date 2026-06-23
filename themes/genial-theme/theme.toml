@@ -1,8 +1,0 @@
-name = "Genial Inc Theme"
-license = "MIT"
-licenselink = "https://github.com"
-description = "A warm, retro-tinted minimal theme for a student mathematics and computer science collective."
-# homepage = "https://example.com"
-tags = ["portfolio", "students", "minimal", "green"]
-features = []
-min_version = "0.110.0"
