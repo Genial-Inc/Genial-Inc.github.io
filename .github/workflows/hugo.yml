@@ -48,7 +48,13 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
-      - name: Build with Hugo
+      - name: Fetch Genial Bubble web build
+        run: |
+          mkdir -p ./static/play/genial-bubble
+          wget -O ${{ runner.temp }}/web-build.zip \
+            https://github.com/Genial-Inc/Genial-Bubble/releases/download/0.1/web-build.zip
+          unzip ${{ runner.temp }}/web-build.zip -d ${{ runner.temp }}/web-build-extract
+          mv ${{ runner.temp }}/web-build-extract/web-build/* ./static/play/genial-bubble/
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
