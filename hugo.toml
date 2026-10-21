@@ -71,7 +71,7 @@ theme = "genial-theme"
 #   [markup.goldmark.renderer]
 #     unsafe = true
 
-# Optional: Define your main menu if you decide to make the hardcoded header dynamic later
+# Main navigation menu rendered by the header.
 [[menu.main]]
   name = "HOME"
   url = "/"
