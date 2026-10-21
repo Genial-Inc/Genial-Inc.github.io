@@ -51,9 +51,10 @@ theme = "genial-theme"
     description = "Le riche du groupe."
 
     [[params.team.members]]
-    name = "Arthur Hamelin 👺"
-    shortName = "Arthur"
-    description = "L'activiste du groupe."
+    name = "?"
+    shortName = "?"
+    description = "CLASSIFIED"
+    image = "/images/classified-stamp.png"
 
     [[params.team.members]]
     name = "Ablaye Lederoff"
