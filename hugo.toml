@@ -30,13 +30,33 @@ theme = "genial-theme"
     [[params.team.members]]
     name = "Unai Hernandez Minaberry"
     shortName = "Unai"
-    description = "Hola"
+    description = "L'argentin du groupe."
     # image = "/images/unai.png"
 
     [[params.team.members]]
     name = "Julien Chatelet"
     shortName = "Julien"
-    description = "Bla bla bla"
+    description = "Le colérique du groupe."
+
+    [[params.team.members]]
+    name = "Jacques Marion"
+    shortName = "Jacques"
+    description = "Le riche du groupe."
+
+    [[params.team.members]]
+    name = "Arthur Hamelin 👺"
+    shortName = "Arthur"
+    description = "L'activiste du groupe."
+
+    [[params.team.members]]
+    name = "Ablaye Lederoff"
+    shortName = "Blayou"
+    description = "Le beatboxer du groupe."
+
+    [[params.team.members]]
+    name = "Raphaël Dreyfus"
+    shortName = "Raphaël"
+    description = "Le littéraire du groupe."
 
 # [markup]
 #   # Ensure clean HTML output without injecting unwanted wrapper tags
