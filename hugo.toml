@@ -11,6 +11,8 @@ theme = "genial-theme"
   author = "Genial Inc."
   themeColor = "#be5e41"
   themeColorStrong = "#9f401d"
+  bigLogo = "/images/genial_logo_grand.png"
+  smallLogo = "/images/genial_logo_petit.png"
 
   [params.hero]
   title = "Genial Bubble"
