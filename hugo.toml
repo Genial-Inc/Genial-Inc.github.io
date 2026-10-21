@@ -9,10 +9,17 @@ theme = "genial-theme"
 [params]
   description = "Collectif d'étudiants passionnés par les mathématiques et l'informatique."
   author = "Genial Inc."
+  themeColor = "#ed7d44"
+  themeColorStrong = "#dc733e"
+  bigLogo = "/images/genial_logo_grand.png"
+  smallLogo = "/images/genial_logo_petit.png"
+  favicon = "/images/genial_logo_petit.png"
 
   [params.hero]
   title = "Genial Bubble"
   description = "Jeu de platformes Global Game Jam 2025"
+  quote = "On n'apprend pas à faire du vélo en regardant quelqu'un faire du vélo."
+  quoteAuthor = "M. Thierry Montaut"
   image = "/projects/images/genial-bubble.png"
   button.text = "Jouer"
   button.url = "/play/genial-bubble"
@@ -30,20 +37,41 @@ theme = "genial-theme"
     [[params.team.members]]
     name = "Unai Hernandez Minaberry"
     shortName = "Unai"
-    description = "Hola"
+    description = "L'argentin du groupe."
     # image = "/images/unai.png"
 
     [[params.team.members]]
     name = "Julien Chatelet"
     shortName = "Julien"
-    description = "Bla bla bla"
+    description = "Le sportif du groupe."
+
+    [[params.team.members]]
+    name = "Jacques Marion"
+    shortName = "Jacques"
+    description = "Le riche du groupe."
+
+    [[params.team.members]]
+    name = "?"
+    shortName = "?"
+    description = "CLASSIFIED"
+    image = "/images/classified-stamp.png"
+
+    [[params.team.members]]
+    name = "Ablaye Lederoff"
+    shortName = "Blayou"
+    description = "Le beatboxer du groupe."
+
+    [[params.team.members]]
+    name = "Raphaël Dreyfus"
+    shortName = "Raphaël"
+    description = "Le littéraire du groupe."
 
 # [markup]
 #   # Ensure clean HTML output without injecting unwanted wrapper tags
 #   [markup.goldmark.renderer]
 #     unsafe = true
 
-# Optional: Define your main menu if you decide to make the hardcoded header dynamic later
+# Main navigation menu rendered by the header.
 [[menu.main]]
   name = "HOME"
   url = "/"
