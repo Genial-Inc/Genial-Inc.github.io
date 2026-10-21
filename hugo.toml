@@ -13,6 +13,8 @@ theme = "genial-theme"
   [params.hero]
   title = "Genial Bubble"
   description = "Jeu de platformes Global Game Jam 2025"
+  quote = "On n'apprend pas à faire du vélo en regardant quelqu'un faire du vélo."
+  quoteAuthor = "M. Thierry Montaut"
   image = "/projects/images/genial-bubble.png"
   button.text = "Jouer"
   button.url = "/play/genial-bubble"
