@@ -9,6 +9,8 @@ theme = "genial-theme"
 [params]
   description = "Collectif d'étudiants passionnés par les mathématiques et l'informatique."
   author = "Genial Inc."
+  themeColor = "#be5e41"
+  themeColorStrong = "#9f401d"
 
   [params.hero]
   title = "Genial Bubble"
