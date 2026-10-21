@@ -57,8 +57,8 @@ theme = "genial-theme"
     image = "/images/classified-stamp.png"
 
     [[params.team.members]]
-    name = "Ablaye Lederoff"
-    shortName = "Blayou"
+    name = "Ablaye Le Déroff"
+    shortName = "Ablaye"
     description = "Le beatboxer du groupe."
 
     [[params.team.members]]
