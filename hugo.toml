@@ -9,8 +9,8 @@ theme = "genial-theme"
 [params]
   description = "Collectif d'étudiants passionnés par les mathématiques et l'informatique."
   author = "Genial Inc."
-  themeColor = "#be5e41"
-  themeColorStrong = "#9f401d"
+  themeColor = "#ed7d44"
+  themeColorStrong = "#dc733e"
   bigLogo = "/images/genial_logo_grand.png"
   smallLogo = "/images/genial_logo_petit.png"
 
@@ -42,7 +42,7 @@ theme = "genial-theme"
     [[params.team.members]]
     name = "Julien Chatelet"
     shortName = "Julien"
-    description = "Le colérique du groupe."
+    description = "Le sportif du groupe."
 
     [[params.team.members]]
     name = "Jacques Marion"
