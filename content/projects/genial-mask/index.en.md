@@ -4,6 +4,7 @@ date: 2026-02-01
 description: Stealth game made during the Global Game Jam 2026, on the theme "Mask" — get your grades back with a mask that can imitate anyone's DNA.
 params:
   event: Global Game Jam 2026
+  source: https://github.com/Genial-Inc/Genial-Mask
   link: https://globalgamejam.org/games/2026/genial-mask-4
 ---
 

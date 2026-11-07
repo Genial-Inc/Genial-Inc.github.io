@@ -4,6 +4,7 @@ date: 2026-02-01
 description: Jeu d'infiltration créé lors de la Global Game Jam 2026, sur le thème « Mask » — récupérez vos notes grâce à un masque capable d'imiter l'ADN de n'importe qui.
 params:
   event: Global Game Jam 2026
+  source: https://github.com/Genial-Inc/Genial-Mask
   link: https://globalgamejam.org/games/2026/genial-mask-4
 ---
 
