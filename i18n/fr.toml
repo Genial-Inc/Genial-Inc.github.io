@@ -1,0 +1,59 @@
+[skip_to_content]
+other = "Aller au contenu"
+[primary_navigation]
+other = "Navigation principale"
+[open_navigation]
+other = "Ouvrir le menu de navigation"
+[close_navigation]
+other = "Fermer le menu de navigation"
+[language_switcher]
+other = "Choisir la langue"
+[logo_alt]
+other = "Logo de Genial Inc."
+[about_more]
+other = "En savoir plus sur nous"
+[team_intro]
+other = "Une équipe, plusieurs passions et un goût commun pour les projets."
+[study_program]
+other = "La double licence Mathématiques-Informatique (DLMI)"
+[projects_title]
+other = "Nos projets"
+[previous_project]
+other = "Projet précédent"
+[next_project]
+other = "Projet suivant"
+[read_project]
+other = "Voir le projet"
+[view_details]
+other = "Voir les détails"
+[view_game]
+other = "Jouer au jeu"
+[source_code]
+other = "Code source"
+[published_on]
+other = "Publié le"
+[back_to_projects]
+other = "Retour aux projets"
+[back_home]
+other = "Retour à l'accueil"
+[all_projects]
+other = "Tous les projets"
+[contact_demo]
+other = "Essayer le formulaire expérimental"
+[github]
+other = "GitHub"
+[footer_about]
+other = "Le collectif"
+[footer_follow]
+other = "Retrouvez-nous"
+[footer_resources]
+other = "Ressources"
+[footer_tagline]
+other = "Un collectif étudiant de la DLMI à l'INU Champollion."
+[external_link]
+other = "Ouvre un site externe"
+[project_image_alt]
+other = "Illustration du projet"
+
+[contact_demo_intro]
+other = "Ce formulaire est une expérience interactive : il ne permet pas de nous contacter réellement."

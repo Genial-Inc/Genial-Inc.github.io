@@ -1,0 +1,59 @@
+[skip_to_content]
+other = "Skip to content"
+[primary_navigation]
+other = "Primary navigation"
+[open_navigation]
+other = "Open navigation menu"
+[close_navigation]
+other = "Close navigation menu"
+[language_switcher]
+other = "Choose language"
+[logo_alt]
+other = "Genial Inc. logo"
+[about_more]
+other = "Learn more about us"
+[team_intro]
+other = "One team, different interests, and a shared enthusiasm for projects."
+[study_program]
+other = "The Double Degree in Mathematics and Computer Science (DLMI)"
+[projects_title]
+other = "Our projects"
+[previous_project]
+other = "Previous project"
+[next_project]
+other = "Next project"
+[read_project]
+other = "View project"
+[view_details]
+other = "View details"
+[view_game]
+other = "Play the game"
+[source_code]
+other = "Source code"
+[published_on]
+other = "Published on"
+[back_to_projects]
+other = "Back to projects"
+[back_home]
+other = "Back to home"
+[all_projects]
+other = "All projects"
+[contact_demo]
+other = "Try the experimental contact form"
+[github]
+other = "GitHub"
+[footer_about]
+other = "The collective"
+[footer_follow]
+other = "Find us online"
+[footer_resources]
+other = "Resources"
+[footer_tagline]
+other = "A student collective from the DLMI programme at INU Champollion."
+[external_link]
+other = "Opens an external website"
+[project_image_alt]
+other = "Project illustration"
+
+[contact_demo_intro]
+other = "This form is an interactive experiment; it cannot be used to contact us."

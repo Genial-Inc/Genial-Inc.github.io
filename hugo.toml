@@ -1,93 +1,171 @@
-# baseURL = "https://genial.inc/"
-locale = "fr-FR"
+baseURL = "https://genial-inc.github.io/"
 title = "Genial Inc."
 theme = "genial-theme"
-
-# Disable default taxonomies if you only need a single-page landing site
-# disableKinds = ["taxonomy", "term"]
+defaultContentLanguage = "fr"
+defaultContentLanguageInSubdir = false
 
 [params]
-  description = "Collectif d'étudiants passionnés par les mathématiques et l'informatique."
+  description = "Collectif d'étudiants de la double licence Mathématiques-Informatique de l'INU Champollion."
   author = "Genial Inc."
   themeColor = "#ed7d44"
   themeColorStrong = "#dc733e"
   bigLogo = "/images/genial_logo_grand.png"
   smallLogo = "/images/genial_logo_petit.png"
   favicon = "/images/genial_logo_petit.png"
+  github = "https://github.com/Genial-Inc"
+  studyProgram = "https://www.univ-jfc.fr/node/438"
 
-  [params.hero]
-  title = "Genial Bubble"
-  description = "Jeu de platformes Global Game Jam 2025"
-  quote = "On n'apprend pas à faire du vélo en regardant quelqu'un faire du vélo."
-  quoteAuthor = "M. Thierry Montaut"
-  image = "/projects/images/genial-bubble.png"
-  button.text = "Jouer"
-  button.url = "/play/genial-bubble"
-
-  [params.about]
-    title = "Qu'est-ce que Génial Inc. ?"
-    description = """
-    Nous sommes un petit groupe d'étudiants passionnés par les mathématiques
-    et l'informatique, actifs dans de nombreux projets et événements !
-    """
-
-  [params.team]
-    title = "La team géniale"
-
-    [[params.team.members]]
-    name = "Unai Hernandez Minaberry"
-    shortName = "Unai"
-    description = "L'argentin du groupe."
-    # image = "/images/unai.png"
-
-    [[params.team.members]]
-    name = "Julien Chatelet"
-    shortName = "Julien"
-    description = "Le sportif du groupe."
-
-    [[params.team.members]]
-    name = "Jacques Marion"
-    shortName = "Jacques"
-    description = "Le riche du groupe."
-
-    [[params.team.members]]
-    name = "[REDACTED]"
-    shortName = "[REDACTED]"
-    description = "L'activiste du groupe."
-    image = "/images/classified-stamp.png"
-
-    [[params.team.members]]
-    name = "Ablaye Le Déroff"
-    shortName = "Ablaye"
-    description = "Le beatboxer du groupe."
-
-    [[params.team.members]]
-    name = "Raphaël"
-    shortName = "Raphaël"
-    description = "Le littéraire du groupe."
-
-# [markup]
-#   # Ensure clean HTML output without injecting unwanted wrapper tags
-#   [markup.goldmark.renderer]
-#     unsafe = true
-
-# Main navigation menu rendered by the header.
-[[menu.main]]
-  name = "HOME"
-  url = "/"
+[languages.fr]
+  label = "Français"
+  locale = "fr-FR"
+  title = "Genial Inc."
   weight = 1
 
-[[menu.main]]
-  name = "Projets"
-  url = "#projects"
+  [languages.fr.params.hero]
+    title = "Mathématiques, informatique et projets étudiants"
+    description = "Un collectif d'étudiants de la double licence Mathématiques-Informatique de l'INU Champollion."
+    quote = "On n'apprend pas à faire du vélo en regardant quelqu'un faire du vélo."
+    quoteAuthor = "M. Thierry Montaut"
+    image = "/projects/images/genial-bubble.png"
+    buttonText = "Jouer à Genial Bubble"
+    buttonURL = "/play/genial-bubble/"
+
+  [languages.fr.params.about]
+    title = "Qu'est-ce que Genial Inc. ?"
+    description = "Nous sommes un petit groupe d'étudiants de la double licence Mathématiques-Informatique (DLMI) de l'INU Champollion. Nous aimons apprendre, programmer et donner vie à des projets collectifs, notamment lors de game jams et d'événements étudiants."
+
+  [languages.fr.params.team]
+    title = "La team géniale"
+
+    [[languages.fr.params.team.members]]
+      name = "Unai Hernandez Minaberry"
+      shortName = "Unai"
+      description = "L'argentin du groupe."
+
+    [[languages.fr.params.team.members]]
+      name = "Julien Chatelet"
+      shortName = "Julien"
+      description = "Le sportif du groupe."
+
+    [[languages.fr.params.team.members]]
+      name = "Jacques Marion"
+      shortName = "Jacques"
+      description = "Le riche du groupe."
+
+    [[languages.fr.params.team.members]]
+      name = "[REDACTED]"
+      shortName = "[REDACTED]"
+      description = "L'activiste du groupe."
+      image = "/images/classified-stamp.png"
+
+    [[languages.fr.params.team.members]]
+      name = "Ablaye Le Déroff"
+      shortName = "Ablaye"
+      description = "Le beatboxer du groupe."
+
+    [[languages.fr.params.team.members]]
+      name = "Raphaël"
+      shortName = "Raphaël"
+      description = "Le littéraire du groupe."
+
+  [[languages.fr.menus.main]]
+    identifier = "home"
+    name = "Accueil"
+    pageRef = "/"
+    weight = 1
+  [[languages.fr.menus.main]]
+    name = "À propos"
+    pageRef = "/about-us"
+    weight = 2
+  [[languages.fr.menus.main]]
+    name = "Projets"
+    url = "#projects"
+    weight = 3
+  [[languages.fr.menus.main]]
+    name = "Équipe"
+    url = "#team"
+    weight = 4
+  [[languages.fr.menus.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 5
+
+[languages.en]
+  label = "English"
+  locale = "en-US"
+  title = "Genial Inc."
   weight = 2
 
-[[menu.main]]
-  name = "La team"
-  url = "#team"
-  weight = 3
+  [languages.en.params.hero]
+    title = "Mathematics, computer science and student projects"
+    description = "A student collective from the Double Degree in Mathematics and Computer Science at INU Champollion."
+    quote = "You don't learn to ride a bicycle by watching someone else ride one."
+    quoteAuthor = "Mr Thierry Montaut"
+    image = "/projects/images/genial-bubble.png"
+    buttonText = "Play Genial Bubble"
+    buttonURL = "/play/genial-bubble/"
 
-[[menu.main]]
-  name = "Contact"
-  url = "#contact"
-  weight = 4
+  [languages.en.params.about]
+    title = "What is Genial Inc.?"
+    description = "We are a small group of students from the Double Degree in Mathematics and Computer Science (DLMI) at INU Champollion. We enjoy learning, programming and bringing collaborative projects to life, particularly during game jams and student events."
+
+  [languages.en.params.team]
+    title = "The Genial team"
+
+    [[languages.en.params.team.members]]
+      name = "Unai Hernandez Minaberry"
+      shortName = "Unai"
+      description = "The Argentinian of the group."
+
+    [[languages.en.params.team.members]]
+      name = "Julien Chatelet"
+      shortName = "Julien"
+      description = "The sporty one."
+
+    [[languages.en.params.team.members]]
+      name = "Jacques Marion"
+      shortName = "Jacques"
+      description = "The wealthy one."
+
+    [[languages.en.params.team.members]]
+      name = "[REDACTED]"
+      shortName = "[REDACTED]"
+      description = "The activist of the group."
+      image = "/images/classified-stamp.png"
+
+    [[languages.en.params.team.members]]
+      name = "Ablaye Le Déroff"
+      shortName = "Ablaye"
+      description = "The beatboxer of the group."
+
+    [[languages.en.params.team.members]]
+      name = "Raphaël"
+      shortName = "Raphaël"
+      description = "The literature enthusiast."
+
+  [[languages.en.menus.main]]
+    identifier = "home"
+    name = "Home"
+    pageRef = "/"
+    weight = 1
+  [[languages.en.menus.main]]
+    name = "About"
+    pageRef = "/about-us"
+    weight = 2
+  [[languages.en.menus.main]]
+    name = "Projects"
+    url = "#projects"
+    weight = 3
+  [[languages.en.menus.main]]
+    name = "Team"
+    url = "#team"
+    weight = 4
+  [[languages.en.menus.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 5
+
+[markup.goldmark.renderer]
+  unsafe = false
