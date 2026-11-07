@@ -27,7 +27,7 @@ theme = "genial-theme"
   [params.about]
     title = "Qu'est-ce que Génial Inc. ?"
     description = """
-    Nous sommes un petit groupe d'étudiants passionnés par les mathématiques.
+    Nous sommes un petit groupe d'étudiants passionnés par les mathématiques
     et l'informatique, actifs dans de nombreux projets et événements !
     """
 
@@ -51,9 +51,9 @@ theme = "genial-theme"
     description = "Le riche du groupe."
 
     [[params.team.members]]
-    name = "?"
-    shortName = "?"
-    description = "CLASSIFIED"
+    name = "[REDACTED]"
+    shortName = "[REDACTED]"
+    description = "L'activiste du groupe."
     image = "/images/classified-stamp.png"
 
     [[params.team.members]]
@@ -62,7 +62,7 @@ theme = "genial-theme"
     description = "Le beatboxer du groupe."
 
     [[params.team.members]]
-    name = "Raphaël Dreyfus"
+    name = "Raphaël"
     shortName = "Raphaël"
     description = "Le littéraire du groupe."
 
