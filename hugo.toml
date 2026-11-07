@@ -53,7 +53,7 @@ theme = "genial-theme"
     [[params.team.members]]
     name = "[REDACTED]"
     shortName = "[REDACTED]"
-    description = "[REDACTED]"
+    description = "L'activiste du groupe."
     image = "/images/classified-stamp.png"
 
     [[params.team.members]]
