@@ -1,0 +1,41 @@
+# Main navigation, shared by every language.
+# Labels are translated with the i18n key matching each identifier (i18n/fr.toml, i18n/en.toml);
+# "name" is only the fallback.
+# "pageRef" points to a page and resolves to the right language automatically.
+# "params.anchor" turns the entry into a link to a section of the home page.
+
+[[main]]
+  identifier = "home"
+  name = "Home"
+  pageRef = "/"
+  weight = 10
+
+[[main]]
+  identifier = "about"
+  name = "About"
+  pageRef = "/about-us"
+  weight = 20
+
+[[main]]
+  identifier = "projects"
+  name = "Projects"
+  pageRef = "/"
+  weight = 30
+  [main.params]
+    anchor = "projects"
+
+[[main]]
+  identifier = "team"
+  name = "Team"
+  pageRef = "/"
+  weight = 40
+  [main.params]
+    anchor = "team"
+
+[[main]]
+  identifier = "contact"
+  name = "Contact"
+  pageRef = "/"
+  weight = 50
+  [main.params]
+    anchor = "contact"

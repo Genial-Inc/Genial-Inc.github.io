@@ -1,0 +1,24 @@
+# Parameters shared by every language.
+# Language-specific texts live in params.fr.toml and params.en.toml.
+
+author = "Genial Inc."
+themeColor = "#ed7d44"
+themeColorStrong = "#dc733e"
+# Text colour on top of themeColor (buttons, active menu item, footer).
+# Dark brown, like the logo: 5.8:1 contrast on the orange (white would only be 2.8:1,
+# below the 4.5:1 required by WCAG AA).
+themeColorText = "#3b1608"
+bigLogo = "/images/genial_logo_grand.png"
+smallLogo = "/images/genial_logo_petit.png"
+favicon = "/images/genial_logo_petit.png"
+
+# Default image used when a page is shared on social networks (Open Graph).
+images = ["/images/genial_logo_grand.png"]
+
+[links]
+  github = "https://github.com/Genial-Inc"
+  studyProgram = "https://www.univ-jfc.fr/node/438"
+  # The contact form is fetched from edemit/lcamapp (branch "ergonomie") at deploy time,
+  # see scripts/fetch-external.sh.
+  contactForm = "/contact/"
+  email = "genial-inc at proton dot me"

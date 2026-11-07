@@ -1,1 +1,12 @@
-public/
+# Hugo build output and caches
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# Fetched at build time by scripts/fetch-external.sh — never commit them
+/static/contact/
+/static/play/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db

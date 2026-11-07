@@ -1,0 +1,39 @@
+# Genial Inc. — main Hugo configuration (Hugo >= 0.158, tested with 0.169).
+#
+# The configuration is split by topic (https://gohugo.io/configuration/introduction/#configuration-directory):
+#   hugo.toml       site-wide settings and languages (this file)
+#   params.toml     parameters shared by every language (colours, logos, links)
+#   params.fr.toml  French texts of the home page (hero, about, team)
+#   params.en.toml  English texts of the home page
+#   menus.toml      main navigation (labels are translated in i18n/*.toml)
+
+# Overridden by the GitHub Pages workflow with the real Pages URL.
+# Switch to "https://genial.inc/" if a custom domain is configured one day.
+baseURL = "https://genial-inc.github.io/"
+title = "Genial Inc."
+theme = "genial-theme"
+timeZone = "Europe/Paris"
+
+# French is the default language and lives at "/", English lives at "/en/".
+defaultContentLanguage = "fr"
+defaultContentLanguageInSubdir = false
+
+# The site does not use tags or categories.
+disableKinds = ["taxonomy", "term"]
+
+enableRobotsTXT = true
+
+[languages]
+  [languages.fr]
+    label = "Français"
+    locale = "fr-FR"
+    weight = 1
+
+  [languages.en]
+    label = "English"
+    locale = "en-US"
+    weight = 2
+
+# Keep processed images in Hugo's cache directory so CI can cache them.
+[caches.images]
+  dir = ":cacheDir/images"
