@@ -1,0 +1,8 @@
+# Site-specific labels (the theme provides the others in themes/genial-theme/i18n/).
+# Menu keys match the "identifier" values in config/_default/menus.toml.
+
+home = "Home"
+about = "About"
+projects = "Projects"
+team = "The team"
+contact = "Contact"

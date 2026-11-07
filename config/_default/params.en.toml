@@ -1,0 +1,59 @@
+# Home page texts — English.
+# Keep exactly the same structure as params.fr.toml.
+
+description = "A collective of students passionate about mathematics and computer science, most of us from the Mathematics–Computer Science double degree (DLMI) at INU Champollion."
+
+[hero]
+  # Featured project: its cover image is the background and its title the kicker.
+  project = "/projects/genial-bubble"
+  description = "Platformer – Global Game Jam 2025"
+  quote = "You don't learn to ride a bike by watching someone else ride a bike."
+  quoteAuthor = "Thierry Montaut"
+  [hero.button]
+    text = "Play"
+    url = "/play/genial-bubble/"
+
+[about]
+  page = "/about-us"   # "Learn more" page
+  title = "What is Genial Inc.?"
+  description = """
+  We are a small group of students passionate about mathematics and computer
+  science, involved in lots of projects and events!
+  Most of us study for the Mathematics–Computer Science double degree (DLMI)
+  at INU Champollion.
+  """
+
+[team]
+  title = "The genial team"
+
+  [[team.members]]
+    name = "Unai Hernandez Minaberry"
+    shortName = "Unai"
+    description = "The Argentinian of the group."
+    # image = "/images/unai.png"
+
+  [[team.members]]
+    name = "Julien Chatelet"
+    shortName = "Julien"
+    description = "The sporty one of the group."
+
+  [[team.members]]
+    name = "Jacques Marion"
+    shortName = "Jacques"
+    description = "The rich one of the group."
+
+  [[team.members]]
+    name = "[REDACTED]"
+    shortName = "[REDACTED]"
+    description = "The activist of the group."
+    image = "/images/classified-stamp.png"
+
+  [[team.members]]
+    name = "Ablaye Le Déroff"
+    shortName = "Ablaye"
+    description = "The beatboxer of the group."
+
+  [[team.members]]
+    name = "Raphaël"
+    shortName = "Raphaël"
+    description = "The literary one of the group."

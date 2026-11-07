@@ -1,0 +1,8 @@
+# Libellés propres au site (le thème fournit les autres dans themes/genial-theme/i18n/).
+# Les clés du menu correspondent aux "identifier" de config/_default/menus.toml.
+
+home = "Accueil"
+about = "À propos"
+projects = "Projets"
+team = "La team"
+contact = "Contact"

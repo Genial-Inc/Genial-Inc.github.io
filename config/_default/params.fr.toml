@@ -1,0 +1,59 @@
+# Textes de la page d'accueil — français.
+# params.en.toml doit garder exactement la même structure.
+
+description = "Collectif d'étudiants passionnés par les mathématiques et l'informatique, pour la plupart en double licence Mathématiques-Informatique (DLMI) à l'INU Champollion."
+
+[hero]
+  # Projet mis en avant : son image de couverture sert de fond et son titre de sur-titre.
+  project = "/projects/genial-bubble"
+  description = "Jeu de plateformes – Global Game Jam 2025"
+  quote = "On n'apprend pas à faire du vélo en regardant quelqu'un faire du vélo."
+  quoteAuthor = "M. Thierry Montaut"
+  [hero.button]
+    text = "Jouer"
+    url = "/play/genial-bubble/"
+
+[about]
+  page = "/about-us"   # page « En savoir plus »
+  title = "Qu'est-ce que Génial Inc. ?"
+  description = """
+  Nous sommes un petit groupe d'étudiants passionnés par les mathématiques
+  et l'informatique, actifs dans de nombreux projets et événements !
+  La plupart d'entre nous étudient en double licence Mathématiques-Informatique (DLMI)
+  à l'INU Champollion.
+  """
+
+[team]
+  title = "La team géniale"
+
+  [[team.members]]
+    name = "Unai Hernandez Minaberry"
+    shortName = "Unai"
+    description = "L'argentin du groupe."
+    # image = "/images/unai.png"
+
+  [[team.members]]
+    name = "Julien Chatelet"
+    shortName = "Julien"
+    description = "Le sportif du groupe."
+
+  [[team.members]]
+    name = "Jacques Marion"
+    shortName = "Jacques"
+    description = "Le riche du groupe."
+
+  [[team.members]]
+    name = "[REDACTED]"
+    shortName = "[REDACTED]"
+    description = "L'activiste du groupe."
+    image = "/images/classified-stamp.png"
+
+  [[team.members]]
+    name = "Ablaye Le Déroff"
+    shortName = "Ablaye"
+    description = "Le beatboxer du groupe."
+
+  [[team.members]]
+    name = "Raphaël"
+    shortName = "Raphaël"
+    description = "Le littéraire du groupe."
