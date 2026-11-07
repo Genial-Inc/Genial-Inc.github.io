@@ -21,5 +21,4 @@ images = ["/images/genial_logo_grand.png"]
   # The contact form is fetched from edemit/lcamapp (branch "ergonomie") at deploy time,
   # see scripts/fetch-external.sh.
   contactForm = "/contact/"
-  # Uncomment to display a "real" e-mail address next to the contact form.
-  # email = "contact@example.org"
+  email = "genial-inc at proton dot me"
